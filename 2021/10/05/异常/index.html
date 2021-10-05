@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="异常Error  程序无法恢复的错误，遇到时不需要程序进行处理。常见的有栈内存溢出StackOverFlowError（最常见例子无终止递归）。 123456789public class ErrorExample &amp;#123;    public static void main(String[] args) &amp;#123;        ErrorExample errorExample &#x3D; n">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="g:/html文件%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1633411545090.png">
-<meta property="og:image" content="g:/html文件%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1633411957091.png">
-<meta property="og:image" content="g:/html文件%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1633412926252.png">
+<meta property="og:image" content="http://example.com/.com//1.png">
+<meta property="og:image" content="http://example.com/.com//2.png">
+<meta property="og:image" content="http://example.com/.com//3.png">
 <meta property="article:published_time" content="2021-10-05T04:44:58.452Z">
-<meta property="article:modified_time" content="2021-10-05T05:49:11.061Z">
+<meta property="article:modified_time" content="2021-10-05T06:24:30.323Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="g:/html文件%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1633411545090.png">
+<meta name="twitter:image" content="http://example.com/.com//1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -167,18 +167,18 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class ErrorExample &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ErrorExample errorExample = new ErrorExample();</span><br><span class="line">        errorExample.error();</span><br><span class="line">    &#125;</span><br><span class="line">    public void error()&#123;</span><br><span class="line">        error();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p><img src="G:\html文件%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1633411545090.png" alt="1633411545090"></p>
+<p><img src="/.com//1.png" alt="1633411545090"></p>
 <h2 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h2><p>代表异常，程序有可能恢复的异常情况</p>
 <h3 id="RuntimeException及其所有子类（运行时的异常）"><a href="#RuntimeException及其所有子类（运行时的异常）" class="headerlink" title="RuntimeException及其所有子类（运行时的异常）"></a>RuntimeException及其所有子类（运行时的异常）</h3><p>程序运行时出现的异常，由于程序自身的问题导致的异常，在语法上不强制程序员必须处理</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class RuntimeExceptionExample &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] nums=new int[10];</span><br><span class="line">        System.out.println(nums[11]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p><img src="G:\html文件%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1633411957091.png" alt="1633411957091"></p>
+<p><img src="/.com//2.png" alt="1633411957091"></p>
 <h3 id="其他Exception"><a href="#其他Exception" class="headerlink" title="其他Exception"></a>其他Exception</h3><p>程序外部导致的异常。此类异常编译不通过，需要程序员必须处理，如果不处理会导致语法错误</p>
 <p>处理方式：throw到上层或try catch</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class OthersExceptionExample &#123;</span><br><span class="line">    public static void main(String[] args) throws FileNotFoundException &#123;</span><br><span class="line">        File file=new File(&quot;a.txt&quot;);</span><br><span class="line">        FileInputStream fileInputStream=new FileInputStream(file);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="G:\html文件%5CUsers%5Clenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1633412926252.png" alt="1633412926252"></p>
+<p><img src="/.com//3.png" alt="1633412926252"></p>
 
       
 
